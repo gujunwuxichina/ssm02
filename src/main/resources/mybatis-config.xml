@@ -12,4 +12,8 @@
         <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
 
+    <typeAliases>
+        <typeAlias type="com.gujun.entity.Person" alias="person"/>
+    </typeAliases>
+
 </configuration>

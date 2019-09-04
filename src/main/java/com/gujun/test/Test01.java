@@ -1,6 +1,7 @@
 package com.gujun.test;
 
 import com.gujun.dao.PersonMapper;
+import com.gujun.entity.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,10 +22,10 @@ public class Test01 {
     public void test01(){
         ApplicationContext context=new ClassPathXmlApplicationContext("spring-config.xml");
         PersonMapper personMapper=context.getBean(PersonMapper.class);
-        List<Map> persons=personMapper.getAll();
+        List<Person> persons=personMapper.getAll();
         System.out.println(persons.size());
-        for(Map map:persons){
-            System.out.println(map.get("name").toString()+"-"+map.get("age"));
+        for(Person person:persons){
+            System.out.println(person.toString());
         }
     }
 

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gujun.dao.PersonMapper">
 
-    <select id="getAll" resultType="map">
+    <select id="getAll" resultType="person">
         select
-            name,age
+            id,name,age
         from
             person_tab
     </select>
