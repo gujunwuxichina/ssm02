@@ -9,4 +9,39 @@
             person_tab
     </select>
 
+    <select id="getById" parameterType="int" resultType="person">
+        select
+            *
+        from
+            person_tab
+        where
+            id=#{id}
+    </select>
+
+    <delete id="deleteById" parameterType="int">
+        delete
+        from
+            person_tab
+        where
+            id=#{id}
+    </delete>
+
+    <insert id="saveOne" parameterType="person" useGeneratedKeys="true" keyProperty="id">
+        insert into
+            person_tab
+            (name,age)
+        values
+            (#{name},#{age})
+    </insert>
+
+    <update id="update" parameterType="person">
+        update
+            person_tab
+        set
+            name=#{name},
+            age=#{age}
+        where
+            id=#{id}
+    </update>
+
 </mapper>

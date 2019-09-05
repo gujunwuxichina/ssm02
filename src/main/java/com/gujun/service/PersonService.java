@@ -1,12 +1,10 @@
-package com.gujun.dao;
+package com.gujun.service;
 
 import com.gujun.entity.Person;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface PersonMapper {
+public interface PersonService {
 
     List<Person> getAll();
 
@@ -15,6 +13,8 @@ public interface PersonMapper {
     int deleteById(Integer id);
 
     int saveOne(Person person);
+
+    Person insertPerson(Person person);
 
     int update(Person person);
 
